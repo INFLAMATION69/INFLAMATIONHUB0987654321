@@ -1,0 +1,348 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Inflamation X: Island Gods", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+-------------------------------------------------------------
+
+local Tab = Window:MakeTab({
+	Name = "Main",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Drink",
+	Callback = function()
+local args = {
+	[1] = "EatOrDrink",
+	[2] = workspace.River
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Instant Break",
+	Callback = function()
+while wait() do
+
+local args = {
+	[1] = "UseTool",
+	[2] = CFrame.new
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+  	end    
+})
+
+------------------------------------------------------------------------------------------------
+
+local Tab = Window:MakeTab({
+	Name = "Teleports",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Central ..."
+})
+
+Tab:AddButton({
+	Name = "Central Forest",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-427.901215, 358.900024, 508.051208, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+	end
+})
+
+Tab:AddButton({
+	Name = "Central Badlands",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2053.3999, 712.399902, 1560.54846, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+	end
+})
+
+Tab:AddButton({
+	Name = "Central Plains",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1256.75635, 399.64502, -815.041992, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+	end
+})
+
+Tab:AddButton({
+	Name = "Central Valley",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1339.40112, 358.900024, -433.448761, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+	end
+})
+
+local Section = Tab:AddSection({
+	Name = "Extra Locations"
+})
+
+Tab:AddButton({
+	Name = "Demonite Island Top",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2100.62695, 1189.53687, -594.663147, -0.0334478207, -1.0570966e-07, 0.999440491, 1.775325e-09, 1, 1.05828256e-07, -0.999440491, 5.31405631e-09, -0.0334478207)
+	end
+})
+
+Tab:AddButton({
+	Name = "Demonite Island Bottom",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1859.65552, 705.53656, -97.7963181, -0.293186277, -1.25192612e-09, 0.956055343, 8.33135658e-08, 1, 2.68586131e-08, -0.956055343, 8.75269563e-08, -0.293186277)
+	end
+})
+
+
+Tab:AddButton({
+	Name = "Vally Bridge Tree",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1208.72351, 532.662598, -1443.26892, 0.00367271411, 0.0210784581, 0.999771059, -3.7997961e-06, 0.999777794, -0.0210785866, -0.999993265, 7.36266375e-05, 0.0036719779)
+	end
+})
+
+Tab:AddButton({
+	Name = "Adamantium Rocks",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-612.613892, 882.819641, 2723.74829, 0.720318496, -8.66732535e-08, 0.693643451, 4.26065725e-08, 1, 8.07085456e-08, -0.693643451, -2.8582086e-08, 0.720318496)
+	end
+})
+
+Tab:AddButton({
+	Name = "THE Aetherite Rock",
+	Callback = function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-626.288147, 1228.56946, 2666.02393, 0.337147027, 3.04786454e-08, -0.941452026, -3.14559117e-08, 1, 2.1109285e-08, 0.941452026, 2.24973e-08, 0.337147027)
+	end
+})
+
+----------------------------------------------------------------------------
+
+local Tab = Window:MakeTab({
+	Name = "Masks/Abilities",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Fortune 🔮",
+	Callback = function()
+local args = {
+    [1] = "WearTemporaryMask",
+    [2] = "FortuneMask"
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Tiger 🐯",
+	Callback = function()
+local args = {
+    [1] = "WearTemporaryMask",
+    [2] = "TigerMask"
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Goblin 🦿",
+	Callback = function()
+local args = {
+    [1] = "WearTemporaryMask",
+    [2] = "GoblinMask"
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Crown 👑",
+	Callback = function()
+local args = {
+    [1] = "WearTemporaryMask",
+    [2] = "Crown"
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Champion 🐱‍👤",
+	Callback = function()
+local args = {
+    [1] = "WearTemporaryMask",
+    [2] = "ChampionMask"
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Lion 🦁",
+	Callback = function()
+local args = {
+    [1] = "WearTemporaryMask",
+    [2] = "LionMask"
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+  	end    
+})
+
+--------------------------------------------------------
+
+local Tab = Window:MakeTab({
+	Name = "Auto Pickup",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Iron",
+	Callback = function()
+while wait() do
+
+local args = {
+    [1] = "Pickup",
+    [2] = workspace:FindFirstChild("Iron Ore")
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Sulfur",
+	Callback = function()
+while wait() do
+
+local args = {
+    [1] = "Pickup",
+    [2] = workspace:FindFirstChild("Sulfur")
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Adamantium",
+	Callback = function()
+while wait() do
+
+local args = {
+    [1] = "Pickup",
+    [2] = workspace:FindFirstChild("Adamantium Ore")
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Demonite",
+	Callback = function()
+while wait() do
+
+local args = {
+    [1] = "Pickup",
+    [2] = workspace:FindFirstChild("Demonite Ore")
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+
+end
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Log",
+	Callback = function()
+while wait() do
+
+local args = {
+    [1] = "Pickup",
+    [2] = workspace.Log
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Foliage",
+	Callback = function()
+while wait() do
+
+local args = {
+    [1] = "Pickup",
+    [2] = workspace.Foliage
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Crate",
+	Callback = function()
+while wait() do
+
+local args = {
+    [1] = "Pickup",
+    [2] = workspace:FindFirstChild("Item Crate")
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+
+end
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Mithril",
+	Callback = function()
+while wait() do
+
+local args = {
+    [1] = "Pickup",
+    [2] = workspace:FindFirstChild("Mithril Ore")
+}
+
+game:GetService("ReplicatedStorage").SIGNAL_REMOTE:FireServer(unpack(args))
+
+end
+  	end    
+})
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
